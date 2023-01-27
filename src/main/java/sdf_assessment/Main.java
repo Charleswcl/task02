@@ -14,7 +14,6 @@ public class Main {
         System.out.printf("Welcome.\n");
 
         try (Scanner input = new Scanner(System.in)) {
-            boolean exit = false;
             String quitProgram ="";
             while (quitProgram != "exit") {
 
@@ -25,47 +24,36 @@ public class Main {
                 num2 = input.nextInt();
                 quitProgram = input.nextLine();
 
-                if (operator == '+') {
-                    result = num1 + num2;
-                    System.out.println(result);
-                } else if (operator == '-') {
-                    result = num1 - num2;
-                    System.out.println(result);
-                } else if (operator == '/') {
-                    result = num1 / num2;
-                    System.out.println(result);
-                } else if (operator == '*') {
-                    result = num1 * num2;
-                    System.out.println(result);
-                }
-                // switch (operator) {
-                //     case '+':
-                //         result = num1 + num2;
-                //         System.out.println(result);
-                //         $last = result;
-                //         break;
-                //     case '-':
-                //         result = num1 - num2;
-                //         System.out.println(result);
-                //         $last = result;
+                
+                switch (operator) {
+                    case '+':
+                        result = num1 + num2;
+                        System.out.println(result);
+                        $last = result;
+                        break;
+                    case '-':
+                        result = num1 - num2;
+                        System.out.println(result);
+                        $last = result;
 
-                //         break;
-                //     case '/':
-                //         result = num1 / num2;
-                //         System.out.println(result);
-                //         break;
-                //     case '*':
-                //         result = num1 * num2;
-                //         System.out.println(result);
-                //         break;
-                //     default:
-                //         System.out.println("Only integers and operators are allowed");
-                //         break;
-                // }
+                        break;
+                    case '/':
+                        result = num1 / num2;
+                        System.out.println(result);
+                        break;
+                    case '*':
+                        result = num1 * num2;
+                        System.out.println(result);
+                        break;
+                    default:
+                        System.out.println("Only integers and operators are allowed");
+                        break;
+                }
 
                 }
+                System.out.println("Bye bye");
         }
 
-        System.out.println("Bye bye");
+        
     }
 }
