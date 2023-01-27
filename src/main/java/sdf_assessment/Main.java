@@ -14,17 +14,15 @@ public class Main {
         System.out.printf("Welcome.\n");
 
         try (Scanner input = new Scanner(System.in)) {
-            String quitProgram ="";
+            String quitProgram = "";
             while (quitProgram != "exit") {
 
                 System.out.printf("> ");
-
                 num1 = input.nextInt();
                 operator = input.next().charAt(0);
                 num2 = input.nextInt();
                 quitProgram = input.nextLine();
 
-                
                 switch (operator) {
                     case '+':
                         result = num1 + num2;
@@ -50,10 +48,9 @@ public class Main {
                         break;
                 }
 
-                }
-                System.out.println("Bye bye");
+            }
+            System.out.println("Bye bye");
         }
 
-        
     }
 }
